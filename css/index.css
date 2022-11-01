@@ -1,0 +1,225 @@
+@import url("https://use.typekit.net/wvf0hrt.css");
+
+:root {
+    --primary: #F1F2F3;
+    --complement-1: #11877B;
+    --complement-2: #14BDB1;
+    --secondary: #1E3140;
+
+    --font-family-1: quicksand, sans-serif;
+    --font-family-2: ubuntu, sans-serif;
+    --font-weight-ubuntu: 300;
+    --font-weight-quicksand: 400;
+    --font-style: normal;
+    --font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--font-size);
+}
+
+body {
+    width: 100%;
+    font-family: var(--font-family-1);
+    font-size: var(--font-size);
+    font-style: var(--font-style);
+    font-weight: var(--font-weight-quicksand);
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: var(--font-weight-quicksand);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 5rem;
+    }
+}
+
+.visible {
+    height: 100vh;
+    width: 100%;
+}
+
+/*Barra Navegación*/
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    line-height: 1rem;
+    background-color: var(--secondary);
+}
+
+.nav_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    margin-left: 5rem;
+}
+
+.carrito_icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.carrito_icon i {
+    margin-top: .6rem;
+    font-size: 1.5rem;
+    color: var(--complement-2);
+    margin-right: 5rem;
+}
+
+.carrito_icon span {
+    position: absolute;
+    top: -1.2rem;
+    right: 3.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    padding: 0.5rem;
+    font-family: var(--font-family-2);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+/*section {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}*/
+
+.productos {
+    padding: 5rem 0;
+}
+
+.productos_center {
+    padding: 0 3rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem 1rem;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+}
+
+.image_container img {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.productos_footer {
+    padding: 1rem;
+    width: 100%;
+}
+
+.productos_footer h1 {
+    height: 28px;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.cantidad {
+    display: inline-block;
+    border: 1px solid var(--complement-2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 1rem 1.8rem;
+    color: var(--primary);
+    background-color: var(--complement-2);
+    font-weight: var(--font-weight-quicksand);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid var(--complement-2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 1rem 1.8rem;
+    color: var(--complement-2);
+    font-weight: var(--font-weight-quicksand);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--complement-2);
+    color: var(--primary);
+    border: 1px solid var(--complement-2);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
